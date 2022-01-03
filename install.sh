@@ -17,7 +17,8 @@ nix-env -iA \
 	nixpkgs.ripgrep \
 	nixpkgs.bat \
 	nixpkgs.direnv \
-    nixpkgs.gh
+    nixpkgs.gh \
+    nixpkgs.silver-searcher
 # stow
 stow git
 stow zsh
@@ -32,5 +33,6 @@ sudo chsh -s $(which zsh) $USER
 # bundle zsh plugins with antibody
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
-
+# make vim install plugins
+nvim --headless +PlugInstall +qall
 
